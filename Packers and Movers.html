@@ -1,0 +1,271 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Kutty's Packers and Movers | Safe & Reliable Relocation Services</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Notification Bar -->
+    <div class="bg-brand-900 text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1"><i data-lucide="phone" class="w-3.5 h-3.5 text-accent-500"></i> +91 98400 12345</span>
+                <span class="hidden md:flex items-center gap-1"><i data-lucide="mail" class="w-3.5 h-3.5 text-accent-500"></i> support@srikuttypackers.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="bg-accent-500 text-brand-950 font-semibold px-2 py-0.5 rounded text-xs animate-pulse">24/7 Available</span>
+                <span>ISO 9001:2015 Certified</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-600 to-brand-800 rounded-xl flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="truck" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-brand-900 block leading-none">Sri Kutty's</span>
+                    <span class="text-xs sm:text-sm font-semibold tracking-wider text-accent-600 uppercase">Packers & Movers</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-gray-600">
+                <a href="#services" class="hover:text-brand-600 transition-colors">Services</a>
+                <a href="#calculator" class="hover:text-brand-600 transition-colors">Instant Quote</a>
+                <a href="#track" class="hover:text-brand-600 transition-colors">Track Booking</a>
+                <a href="#why-us" class="hover:text-brand-600 transition-colors">Why Us</a>
+                <a href="#reviews" class="hover:text-brand-600 transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+                <button onclick="openAdminModal()" class="hidden sm:inline-flex items-center gap-2 border border-gray-300 hover:border-brand-600 text-gray-700 hover:text-brand-600 px-4 py-2 rounded-lg font-medium text-sm transition-all">
+                    <i data-lucide="shield-alert" class="w-4 h-4"></i> Admin Login
+                </button>
+                <a href="#calculator" class="bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-md shadow-brand-600/25 transition-all flex items-center gap-2">
+                    <i data-lucide="calculator" class="w-4 h-4"></i> Get Free Quote
+                </a>
+                <!-- Mobile Menu Toggle -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-3">
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Services</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Instant Quote</a>
+            <a href="#track" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Track Booking</a>
+            <a href="#why-us" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Why Us</a>
+            <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Reviews</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Contact</a>
+            <button onclick="openAdminModal(); toggleMobileMenu();" class="w-full text-left py-2 text-brand-600 font-medium flex items-center gap-2">
+                <i data-lucide="shield-alert" class="w-4 h-4"></i> Admin Login
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-brand-900 via-brand-800 to-brand-950 text-white overflow-hidden py-20 lg:py-32">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-brand-800/80 border border-brand-700 text-accent-400 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">
+                    <i data-lucide="award" class="w-4 h-4"></i> India’s Most Trusted Relocation Partners
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Hassle-Free Moving, <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-amber-200">Delivered With Care</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal">
+                    Experience seamless household shifting, secure office relocations, and vehicle transport across India with 100% damage protection guarantee.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#calculator" class="w-full sm:w-auto bg-accent-500 hover:bg-accent-600 text-brand-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent-500/20 transition-all flex items-center justify-center gap-2 text-base">
+                        Calculate Estimate Now <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#track" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition-all flex items-center justify-center gap-2 text-base">
+                        Track Existing Quote <i data-lucide="search" class="w-5 h-5"></i>
+                    </a>
+                </div>
+                <!-- Trust Badges -->
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-brand-700/60 max-w-lg mx-auto lg:mx-0">
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">15,000+</div>
+                        <div class="text-xs text-gray-400">Successful Moves</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">99.8%</div>
+                        <div class="text-xs text-gray-400">On-Time Delivery</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-white">4.9/5</div>
+                        <div class="text-xs text-gray-400">Customer Rating</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Quick Quote Card -->
+            <div class="lg:col-span-5 bg-white text-gray-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-100">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900">Instant Quick Estimate</h3>
+                    <p class="text-sm text-gray-500">Fill details for a quick quote preview</p>
+                </div>
+                <form id="hero-quick-form" onsubmit="handleHeroQuickSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Moving From</label>
+                        <div class="relative">
+                            <i data-lucide="map-pin" class="absolute left-3 top-3.5 w-4 h-4 text-gray-400"></i>
+                            <input type="text" id="quick-from" required placeholder="e.g., Chennai" class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Moving To</label>
+                        <div class="relative">
+                            <i data-lucide="map-pin" class="absolute left-3 top-3.5 w-4 h-4 text-gray-400"></i>
+                            <input type="text" id="quick-to" required placeholder="e.g., Bangalore" class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Service Type</label>
+                            <select id="quick-service" class="w-full px-3 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                                <option>Household Shifting</option>
+                                <option>Office Relocation</option>
+                                <option>Vehicle Transport</option>
+                                <option>Warehousing</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Phone Number</label>
+                            <input type="tel" id="quick-phone" required placeholder="10-digit mobile" class="w-full px-3 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-xl transition-all shadow-md shadow-brand-600/20 flex items-center justify-center gap-2">
+                        Get Estimate Instantly <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">Our Professional Services</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3">Comprehensive Relocation Solutions Tailored For You</h2>
+                <p class="text-gray-600 mt-4 text-base sm:text-lg">From delicate glassware to heavy industrial equipment and cars, we manage every relocation with utmost precision and safety.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-gray-50 hover:bg-white border border-gray-200/80 hover:border-brand-500/50 rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i data-lucide="home" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Household Shifting</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Safe packing, secure transit, and careful unpacking of your valuable household furniture, electronics, and fragile items.</p>
+                    <a href="#calculator" onclick="setServiceSelection('Household Shifting')" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                        Book Household Move <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-gray-50 hover:bg-white border border-gray-200/80 hover:border-brand-500/50 rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i data-lucide="briefcase" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Office Relocation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Minimal downtime business relocations. Secure handling of servers, workstations, office files, and conference room inventory.</p>
+                    <a href="#calculator" onclick="setServiceSelection('Office Relocation')" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                        Book Office Move <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-gray-50 hover:bg-white border border-gray-200/80 hover:border-brand-500/50 rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i data-lucide="car" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Vehicle Transport</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Enclosed and multi-axle carrier trucks specifically designed for scratch-free bike and car transportation across any state.</p>
+                    <a href="#calculator" onclick="setServiceSelection('Vehicle Transport')" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                        Book Vehicle Transport <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group bg-gray-50 hover:bg-white border border-gray-200/80 hover:border-brand-500/50 rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i data-lucide="warehouse" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Warehousing & Storage</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Clean, spacious, 24/7 guarded storage facilities equipped with pest control and CCTV monitoring for short or long-term stays.</p>
+                    <a href="#calculator" onclick="setServiceSelection('Warehousing')" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                        Store Your Goods <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group bg-gray-50 hover:bg-white border border-gray-200/80 hover:border-brand-500/50 rounded-3xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i data-lucide="package" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Packing & Unpacking</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Multi-layer export quality bubble wraps, corrugated sheets, waterproof foam boxes, and professional unpacking assistance.</p>
+                    <a href="#calculator" onclick="setServiceSelection('Packing & Unpacking')" class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                        Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="group bg-gradient-to-br from-brand-900 to-brand-800 text-white rounded-3xl p-8 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="w-14 h-14 bg-white/10 text-accent-400 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Transit Insurance</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">Complete peace of mind with our zero-hassle transit insurance coverage against accidental damages o
